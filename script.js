@@ -6,3 +6,10 @@ const map = L.mapquest.map('hybrid', {
   layers: L.mapquest.tileLayer('map'),
   zoom: 12
 });
+
+// creates a simple full-featured control set,
+// and it is placed in the top-right-hand corner by default
+//map.addControl(L.mapquest.control());
+
+// adjust control position to bottom right
+map.addControl(L.mapquest.control({ position: 'bottomright' }));
