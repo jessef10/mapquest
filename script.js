@@ -13,3 +13,16 @@ const map = L.mapquest.map('hybrid', {
 
 // adjust control position to bottom right
 map.addControl(L.mapquest.control({ position: 'bottomright' }));
+
+// add a marker (icon)
+L.marker([53.480759, -2.242631], {
+  icon: L.mapquest.icons.marker({
+    primaryColor: '#22407F',
+    secondaryColor: '#3B5998',
+    shadow: true,
+    size: 'md',
+    symbol: 'A'
+  })
+})
+.bindPopup('This is Manchester!')
+.addTo(map);
